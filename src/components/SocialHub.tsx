@@ -22,7 +22,9 @@ export const SocialHub: React.FC = () => {
           return (
             <motion.a 
               key={social.platform}
-              href="#"
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
               whileHover={{ scale: 1.2, rotate: 5 }}
               className="p-2 border border-black/20 hover:bg-black/10 transition-colors"
             >

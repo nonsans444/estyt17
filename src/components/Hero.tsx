@@ -3,6 +3,8 @@ import { motion } from 'motion/react';
 import { Youtube, Music2 } from 'lucide-react';
 import { GlitchText } from './GlitchText';
 
+import { YT_URL, TT_URL } from '../constants';
+
 export const Hero: React.FC = () => {
   return (
     <div className="col-span-3 row-span-1 bg-brand-card border-l-4 border-brand-red p-8 flex flex-col justify-center relative overflow-hidden group min-h-[300px]">
@@ -24,18 +26,24 @@ export const Hero: React.FC = () => {
         </p>
 
         <div className="flex gap-4 mt-8">
-          <motion.button
+          <motion.a
+            href={YT_URL}
+            target="_blank"
+            rel="noreferrer"
             whileHover={{ scale: 1.05 }}
-            className="bg-brand-red text-white px-6 md:px-8 py-2 font-black uppercase text-[10px] md:text-xs btn-glow"
+            className="bg-brand-red text-white px-6 md:px-8 py-2 font-black uppercase text-[10px] md:text-xs btn-glow flex items-center justify-center"
           >
             WATCH ON YOUTUBE
-          </motion.button>
-          <motion.button
+          </motion.a>
+          <motion.a
+            href={TT_URL}
+            target="_blank"
+            rel="noreferrer"
             whileHover={{ scale: 1.05 }}
-            className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 md:px-8 py-2 font-black uppercase text-[10px] md:text-xs"
+            className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 md:px-8 py-2 font-black uppercase text-[10px] md:text-xs flex items-center justify-center"
           >
             FOLLOW ON TIKTOK
-          </motion.button>
+          </motion.a>
         </div>
       </motion.div>
     </div>
