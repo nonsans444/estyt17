@@ -8,8 +8,9 @@ export const Navbar: React.FC = () => {
   const { theme, toggleTheme, language, setLanguage, t } = useAppContext();
 
   return (
-    <nav className="fixed top-0 left-0 w-full h-16 flex items-center justify-between px-6 bg-brand-card/90 backdrop-blur-lg border-b border-white/10 z-50">
-      <div className="flex items-center gap-6">
+    <nav className="fixed top-0 left-0 w-full h-16 bg-brand-card/90 backdrop-blur-lg border-b border-white/10 z-50">
+      <div className="max-w-[1400px] mx-auto h-full flex items-center justify-between px-6">
+        <div className="flex items-center gap-6">
         <div className="text-xl md:text-2xl font-black tracking-tighter italic bg-gradient-to-r from-brand-white via-gray-400 to-brand-neon bg-clip-text text-transparent [filter:drop-shadow(0_0_8px_rgba(0,243,255,0.3))] cursor-default">
           EST_YT17
         </div>
@@ -56,6 +57,7 @@ export const Navbar: React.FC = () => {
           {t('hero.subscribe')}
         </motion.a>
       </div>
-    </nav>
+    </div>
+  </nav>
   );
 };

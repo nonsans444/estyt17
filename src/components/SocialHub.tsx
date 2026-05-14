@@ -10,7 +10,7 @@ export const SocialHub: React.FC = () => {
 
   return (
     <div className="col-span-1 row-span-1 bg-gradient-to-br from-brand-red to-brand-neon/50 text-white p-6 flex flex-col justify-center gap-4 group relative overflow-hidden shadow-[inset_0_0_50px_rgba(0,0,0,0.2)]">
-      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:10px_10px]" />
+      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,var(--color-brand-white)_1px,transparent_1px)] bg-[size:10px_10px]" />
       <div className="relative z-10 text-center">
         <div className="text-3xl font-black leading-none uppercase italic">
           {t('social.comm')}<br />{t('social.center')}

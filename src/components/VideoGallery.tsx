@@ -18,7 +18,7 @@ export const VideoGallery: React.FC = () => {
       
       <div className="grid grid-cols-3 gap-2 flex-1">
         {VIDEOS.map((video) => (
-          <div key={video.id} className="relative bg-black/20 border border-brand-red/20 overflow-hidden group/thumb cursor-pointer hover:border-brand-red/50 transition-colors aspect-video">
+          <div key={video.id} className="relative bg-brand-white/5 border border-brand-red/20 overflow-hidden group/thumb cursor-pointer hover:border-brand-red/50 transition-colors aspect-video">
             <img 
               src={video.thumbnail} 
               alt="" 
