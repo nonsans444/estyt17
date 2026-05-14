@@ -3,15 +3,20 @@ import { SOCIALS } from '../constants';
 import { motion } from 'motion/react';
 import * as LucideIcons from 'lucide-react';
 
+import { useAppContext } from '../context/AppContext';
+
 export const SocialHub: React.FC = () => {
+  const { t } = useAppContext();
+
   return (
-    <div className="col-span-1 row-span-1 bg-brand-red text-brand-dark p-6 flex flex-col justify-center gap-4 group">
-      <div className="text-center">
+    <div className="col-span-1 row-span-1 bg-gradient-to-br from-brand-red to-brand-neon/50 text-white p-6 flex flex-col justify-center gap-4 group relative overflow-hidden shadow-[inset_0_0_50px_rgba(0,0,0,0.2)]">
+      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:10px_10px]" />
+      <div className="relative z-10 text-center">
         <div className="text-3xl font-black leading-none uppercase italic">
-          COMM<br />CENTER
+          {t('social.comm')}<br />{t('social.center')}
         </div>
         <div className="text-[10px] font-bold tracking-[0.2em] mt-1 opacity-80 uppercase">
-          Identity Verified
+          {t('social.join')}
         </div>
       </div>
       
